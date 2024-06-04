@@ -22,7 +22,7 @@ while go == True:
     message = "avilable dates DS"
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
-    driver.minimize_window()
+    #driver.minimize_window()
     driver.get("https://jeddahds.com.sa/Home/Timetable")
     user_input = driver.find_element_by_id('IDNumber')
     user_input.send_keys(USERNAME)
@@ -64,7 +64,7 @@ while go == True:
         speak("avilable dates")
         speak("avilable dates")
         driver.close()
-        time.sleep(400) #go = False break 
+        go = False break 
     else:		
         driver.close()
         time.sleep(1800)
